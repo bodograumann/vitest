@@ -26,3 +26,11 @@ test('request doesn\'t fail when using absolute url because it supports it', () 
     const _r = new Request('/api', { method: 'GET' })
   }).not.toThrow()
 })
+
+test('toContain correctly handles cassList', () => {
+  const wrapper = document.createElement('div')
+  wrapper.classList.add('flex', 'flex-col')
+
+  expect(wrapper.classList).toContain('flex-col')
+  expect(wrapper.classList).not.toContain('flex-row')
+})
