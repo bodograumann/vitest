@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - main
+      - class-list-to-contain
 
   pull_request:
     branches:
